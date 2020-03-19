@@ -52,6 +52,13 @@ public class OMat4x4 {
     public void setM13(double m13) {
         this.m13 = m13;
     }
+    public double getM14() {
+        return m14;
+    }
+
+    public void setM14(double m14) {
+        this.m14 = m14;
+    }
 
     public double getM21() {
         return m21;
@@ -77,6 +84,13 @@ public class OMat4x4 {
     public void setM23(double m23) {
         this.m23 = m23;
     }
+    public double getM24() {
+        return m24;
+    }
+
+    public void setM24(double m24) {
+        this.m24 = m24;
+    }
 
     public double getM31() {
         return m31;
@@ -101,6 +115,47 @@ public class OMat4x4 {
 
     public void setM33(double m33) {
         this.m33 = m33;
+    }
+    public double getM34() {
+        return m34;
+    }
+
+    public void setM34(double m34) {
+        this.m34 = m34
+        ;
+    }
+
+    public double getM41() {
+        return m41;
+    }
+
+    public void setM41(double m41) {
+        this.m41 = m41;
+    }
+
+    public double getM42() {
+        return m42;
+
+    }
+
+    public void setM42(double m42) {
+        this.m42 = m42;
+    }
+
+    public double getM43() {
+        return m43;
+    }
+
+    public void setM43(double m43) {
+        this.m43 = m43;
+    }
+    public double getM44() {
+        return m44;
+    }
+
+    public void setM44(double m44) {
+        this.m44 = m44
+        ;
     }
 
     public double transpuesta() {
