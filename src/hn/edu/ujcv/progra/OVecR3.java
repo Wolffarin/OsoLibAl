@@ -57,13 +57,6 @@ public class OVecR3 {
     }
 
     public String prodCruz(OVecR3 b){
-
-        //
-        //  x  y  z
-        //  x1 y1 z1       i = y * z1 - z * y1;
-        //                 j = - ();
-        //                 k = ;
-        //
         double det1 = (this.y*b.w - b.y*this.w);
         double det2 =(this.x*b.w - b.x*this.w);
         double det3= (this.x*b.y - b.x*this.y);
@@ -85,7 +78,10 @@ public class OVecR3 {
         return x;
     }
 
-    // metodos
-
-    // constructores
+    @Override
+    public String toString()
+    {
+        return " i: " + getX() + " j: " + getY() + " k: " + getW();
+    }
 }
+
