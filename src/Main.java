@@ -24,8 +24,42 @@ public class Main {
 
         // BASE DEL PROGRAMA PARA EJECUCION
 
+        System.out.println("**ALGEBRA LINEAL LIBRERIA 2020**")
 
+        System.out.println(" ");
+                                    // Matrices 2x2
+        System.out.println("MATRICES EN 2X2")
+        System.out.println(" ");
+// Objeto MatrizM1
+        System.out.println("La Matriz 1 es: " + M1);
+        System.out.println(" ");
+// Objeto Matriz M2
+        System.out.println("La Matriz 2 es: " + M2);
+        System.out.println(" ");
+//  Objeto Matriz M3
+        System.out.println("La Matriz 3 es: " + M3);
+        System.out.println(" ");
+        // Objeto Matriz M4
+        System.out.println("La Matriz 4 es: " + M4);
+        System.out.println(" ");
+//Suma de Clase OMat2x2
+        System.out.println("La Suma de Matrices es: " + M1.suma(M2));
+        System.out.println(" ");
+        // Resta de Clase OMat2x2
+        System.out.println("La Resta de Matrices es: " + M1.resta(M2));
+        System.out.println(" ");
 
+        System.out.println("La Multip. de Matrices es: " + M1.mult(M2));   //multi de Clase OMat2x2
+        System.out.println(" ");
+
+        System.out.println("El Det. de Matriz C es: " + M3.determinante());// determinante de Clase OMat2x2
+        System.out.println(" ");
+
+        System.out.println("La Inversa de Matriz D es: " + M4.inversa());  // inversa de Clase OMat2x2
+        System.out.println(" ");
+
+        System.out.println("La Transpuesta de Matriz D es: " + M4.transpuesta()); // transpuesta de Clase OMat2x2
+        System.out.println(" ");
 
 
 

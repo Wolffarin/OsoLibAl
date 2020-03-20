@@ -91,7 +91,7 @@ public class OMat2x2 {
 
     }
 
-    public double mult(OMat2x2 b){
+    public double multip(OMat2x2 b){
         double n11, n12;
 
         double n21, n22;
