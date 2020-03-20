@@ -174,45 +174,20 @@ public class OMat4x4 {
     }
 
 
-    public double resta(OMat3x3 b) {
-        double n11, n12, n13;
-        double n21, n22, n23;
-        double n31, n32, n33;
-
-        n11 = this.mat11 - b.m11;
-        n12 = this.mat12 - b.m12;
-        n13 = this.mat13 - b.m13;
-        n21 = this.mat21 - b.m21;
-        n22 = this.mat22 - b.m22;
-        n23 = this.mat23 - b.m23;
-        n31 = this.mat31 - b.m31;
-        n32 = this.mat32 - b.m32;
-        n33 = this.mat33 - b.m33;
-
-        double g = n11 - n12 - n13 - n21 - n22 - n23 - n31 - n32 - n33;
-
-        return g;
+    public OMat4x4 resta(OMat4x4 b)
+    {
+        return new OMat4x4(this.mat11 - b.mat11, this.mat12 - b.mat12, this.mat13 - b.mat13, this.mat14 - b.mat14,
+                this.mat21 - b.mat21, this.mat22 - b.mat22, this.mat23 - b.mat23, this.mat24 - b.mat24,
+                this.mat31 - b.mat31, this.mat32 - b.mat32, this.mat33 - b.mat33, this.mat34 - b.mat34,
+                this.mat41 - b.mat41, this.mat42 - b.mat42, this.mat43 - b.mat43, this.mat44 - b.mat44);
     }
 
-    public double multiplicacion(OMat3x3 b) {
-        double n11, n12, n13;
-        double n21, n22, n23;
-        double n31, n32, n33;
 
-        n11 = (this.mat11 * b.m11) + (this.mat12 * b.m21);
-        n12 = (this.mat11 * b.m12) + (this.mat12 * b.m22);
-        n13 = (this.mat11 * b.m13) + (this.mat13 * b.m23);
-        n21 = (this.mat21 * b.m11) + (this.mat22 * b.m21);
-        n22 = (this.mat21 * b.m12) + (this.mat22 * b.m22);
-        n23 = (this.mat21 * b.m23) + (this.mat23 * b.m23);
-        n31 = (this.mat31 * b.m31) + (this.mat13 * b.m31);
-        n32 = (this.mat31 * b.m32) + (this.mat32 * b.m32);
-        n33 = (this.mat31 * b.m33) + (this.mat33 * b.m32);
-
-
-        double p = n11 + n12 + n13 + n21 + n22 + n23 + n31 + n32 + n33;
-        //
-        return p;
+    public OMat4x4 multi(OMat4x4 b)
+    {return new OMat4x4(this.mat11 * b.mat11 + this.mat12 * b.mat21 + this.mat13 * b.mat31 + this.mat14 * b.mat41, this.mat11 * b.mat12 + this.mat12 * b.mat22 + this.mat13 * b.mat32 + this.mat14 * b.mat42, this.mat11 * b.mat13 + this.mat12 * b.mat23 + this.mat13 * b.mat33 + this.mat14 * b.mat43, this.mat11 * b.mat14 + this.mat12 * b.mat24 + this.mat13 * b.mat34 + this.mat14 * b.mat44,
+            this.mat21 * b.mat11 + this.mat22 * b.mat21 + this.mat23 * b.mat31 + this.mat24 * b.mat41, this.mat21 * b.mat12 + this.mat22 * b.mat22 + this.mat23 * b.mat32 + this.mat24 * b.mat42, this.mat21 * b.mat13 + this.mat22 * b.mat23 + this.mat23 * b.mat33 + this.mat24 * b.mat43, this.mat21 * b.mat14 + this.mat22 * b.mat24 + this.mat23 * b.mat34 + this.mat24 * b.mat44,
+            this.mat31 * b.mat11 + this.mat32 * b.mat21 + this.mat33 * b.mat31 + this.mat34 * b.mat41, this.mat31 * b.mat12 + this.mat32 * b.mat22 + this.mat33 * b.mat32 + this.mat34 * b.mat42, this.mat31 * b.mat13 + this.mat32 * b.mat23 + this.mat33 * b.mat33 + this.mat34 * b.mat43, this.mat31 * b.mat14 + this.mat32 * b.mat24 + this.mat33 * b.mat34 + this.mat34 * b.mat44,
+            this.mat41 * b.mat11 + this.mat42 * b.mat21 + this.mat43 * b.mat31 + this.mat44 * b.mat41, this.mat41 * b.mat12 + this.mat42 * b.mat22 + this.mat43 * b.mat32 + this.mat44 * b.mat42, this.mat41 * b.mat13 + this.mat42 * b.mat23 + this.mat43 * b.mat33 + this.mat44 * b.mat43, this.mat41 * b.mat14 + this.mat42 * b.mat24 + this.mat43 * b.mat34 + this.mat44 * b.mat44);
     }
 
     // accesoras y mutadoras

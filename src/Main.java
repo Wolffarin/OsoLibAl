@@ -2,25 +2,6 @@ import hn.edu.ujcv.progra.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Creando Obtetos
-       //TODAS LA MATRICES DE 2X2
-        OMat2x2 M1 = new OMat2x2(-5,3,4,7);
-        OMat2x2 M2 = new OMat2x2(9,0,2,-5);
-        OMat2x2 M3 = new OMat2x2(5,3,-1,4);
-        OMat2x2 M4 = new OMat2x2(7,5,-2,9);
-        // TODAS LAS MATRICES QUE CORRESPONDEN A 3X3
-        OMat3x3 Ma1 = new OMat3x3(0,-7,3,2,4,-1,12,7,-6);
-        OMat3x3 Ma2 = new OMat3x3(5,4,-3,0,-6,10,-2,8,11);
-        OMat3x3 Ma3 = new OMat3x3(-2,4,5,6,7,-3,3,0,2);
-        // TODAS LAS MATRICES QUE CORRESPONDEN A 4X4
-        OMat4x4 M1 = new OMat4x4(1,2,3,4,
-                5,6,7,8,
-                9,10,11,12,
-                13, 14,15,16);
-        OMat4x4 M2 = new OMat4x4(-1,5,-1,6,
-                4,5,10,8,
-                -4,8,9,3,
-                0,-8,-5,3);
 
         // BASE DEL PROGRAMA PARA EJECUCION
 
@@ -60,28 +41,25 @@ public class Main {
 
         System.out.println("La Transpuesta de Matriz D es: " + M4.transpuesta()); // transpuesta de Clase OMat2x2
         System.out.println(" ");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        // Creando Obtetos
+        //TODAS LA MATRICES DE 2X2
+        OMat2x2 M1 = new OMat2x2(-5,3,4,7);
+        OMat2x2 M2 = new OMat2x2(9,0,2,-5);
+        OMat2x2 M3 = new OMat2x2(5,3,-1,4);
+        OMat2x2 M4 = new OMat2x2(7,5,-2,9);
+        // TODAS LAS MATRICES QUE CORRESPONDEN A 3X3
+        OMat3x3 Ma1 = new OMat3x3(0,-7,3,2,4,-1,12,7,-6);
+        OMat3x3 Ma2 = new OMat3x3(5,4,-3,0,-6,10,-2,8,11);
+        OMat3x3 Ma3 = new OMat3x3(-2,4,5,6,7,-3,3,0,2);
+        // TODAS LAS MATRICES QUE CORRESPONDEN A 4X4
+        OMat4x4 M1 = new OMat4x4(1,2,3,4,
+                5,6,7,8,
+                9,10,11,12,
+                13, 14,15,16);
+        OMat4x4 M2 = new OMat4x4(-1,5,-1,6,
+                4,5,10,8,
+                -4,8,9,3,
+                0,-8,-5,3);
 
 
         // TODOS LOS VECTORES CORRESPONDIENTES EN R2
