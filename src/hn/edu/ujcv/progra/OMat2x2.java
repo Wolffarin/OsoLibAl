@@ -55,12 +55,13 @@ public class OMat2x2 {
         return g;
     }
 
-    public OMat2x2 inversa(OMat2x2 a){
-        OMat2x2 c = new OMat2x2();
-
-        return new OMat2x2( (1)/ ((m11 * m22)- (m21 * m12)) * m22, (1) / ((m11 * m22)- (m21 * m12)) * -m12,
-                (1) / ((m11 * m22)- (m21 * m12)) * -m21, (1) / ((m11 * m22)- (m21 * m12))*m11 );
+    public OMat2x2 inversa()
+    {
+        this.determinante();
+        return new OMat2x2((1/this.determinante()) * this.m22,(1/this.determinante()) * -this.m12,
+                (1/this.determinante()) * -this.m21,(1/this.determinante()) * this.m11);
     }
+
     public double suma(OMat2x2 b){
         double r11, r12;
         double r21, r22;
@@ -121,43 +122,44 @@ public class OMat2x2 {
         return d;
     }
 
-    // Metodos de la clase.
-    public static OMat2x2 rot(double alpha){
-        //TODO: implementar
-        return new OMat2x2();
-    }
-
-    public double identidad(){
-        double n11, n12;
-
-        double n21, n22;
-
-        n11 = this.m11;
-        n12 = 0;
-        n21 = 0;
-        n22 = this.m22;
-
-        double d = (n11 * n22) - (n12 * n21);
-
-        return d;
-
-    }
 
 
-    // constructores
-    public OMat2x2(){}
 
-    public OMat2x2(OVecR2 a){}
+    public static OMat2x2 identidad()
 
-    public double OMat2x2(double m11, double m12, double m21, double m22)
     {
-
-
-        return m11;
-
+        return new OMat2x2(1,0,0,1);
     }
 
-    public OMat2x2(OVecR2 a, OVecR2 b, boolean esColumna){}
+
+
+    public static OMat2x2 rotacion(double alpha)
+    {
+        double  r11,r12,
+                r21,r22;
+        r11 = Math.cos(alpha);
+        r12 = -Math.sin(alpha);
+        r21 = Math.sin(alpha);
+        r22 = Math.cos(alpha);
+        return new OMat2x2(r11,r12,
+                r21,r22);
+    }
+
+
+
+
+    // v * M => vector
+    public OVecR2 mult(OVecR2 a)
+    {
+        return new OVecR2(a.getX()*this.m11 + a.getY()*this.m21,a.getX()*this.m12 + a.getY()*this.m22);
+    }
+    @Override
+    public String toString()
+    {
+        return "[ "+getM11()+"      "+getM12()+ " ]\n[ " +getM21()+"      "+getM22()+" ]";
+    }
+
 
 
 }
+
