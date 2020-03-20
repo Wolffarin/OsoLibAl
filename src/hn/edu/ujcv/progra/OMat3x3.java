@@ -9,7 +9,7 @@ public class OMat3x3 {
     //constructoress
 
 
-    public OMat3x3(double m11, double m12, double m13, double m21, double m22, double m23, double m31, double m32, double m33) {
+    public OMat3x3(double m11, double m12, double m13, double m21) {
         this.m11 = m11; this.m12 = m12; this.m13 = m13; this.m21 = m21; this.m22 = m22;
         this.m23 = m23; this.m31 = m31; this.m32 = m32; this.m33 = m33;
         double L = m11 + m12 + m13+ m21 + m22 + m23+  m31 + m32 + m33;
@@ -158,6 +158,64 @@ public class OMat3x3 {
         //
         return p;
     }
+    public double determinante()
+    {
+        double respuesta;
+        respuesta = (this.m11*this.m22*this.m33) + (this.m12*this.m23*this.m31) + (this.m13*this.m21*this.m32) - (this.m31*this.m22*this.m13) - (this.m32*this.m23*this.m11) - (this.m33*this.m21*this.m12);
+
+        return respuesta;
+    }
+
+    // Metodos de la clase.
+    public static OMat3x3 rotacionX(double alpha)
+    {
+        double  r22,r23,
+                r32,r33;
+        r22 = Math.cos(alpha);
+        r23 = -Math.sin(alpha);
+        r32 = Math.sin(alpha);
+        r33 = Math.cos(alpha);
+        return new OMat3x3(1,0,0,
+                0
+        );
+    }
+
+    public static OMat3x3 rotacionY(double alpha)
+    {
+        double r11,r13;
+        double r31,r33;
+        r11 = Math.cos(alpha);
+        r13 = Math.sin(alpha);
+        r31 = -Math.sin(alpha);
+        r33 = Math.cos(alpha);
+
+        return new OMat3x3(r11,r13,r31,r33);
+    }
+
+    public static OMat3x3 rotacionZ(double alpha)
+    {
+        double r11,r12;
+        double r21,r22;
+        r11 = Math.cos(alpha);
+        r12 = Math.sin(alpha);
+        r21 = -Math.sin(alpha);
+        r22 = Math.cos(alpha);
+        return new OMat3x3(r11,r12,0,r21);
+    }
+
+    public static OMat3x3 identidad(){
+        return new OMat3x3(1, 0, 0,
+                0
+        );
+    }
+
+    @Override
+    public String toString()
+    {
+        return "[ "+getM11()+"      "+getM12()+"     "+getM13()+" ]\n[ "+getM21()+"      "+getM22()+"     "+getM23()+ " ]\n[ "+getM31()+"      "+getM32()+"     "+getM33()+" ]";
+    }
+
 
 
 }
+
