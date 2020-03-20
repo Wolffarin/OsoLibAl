@@ -22,7 +22,7 @@ public class Lectorteclado {
         return instance;
 
     }
-    private Lectorteclado(){
+    public Lectorteclado(){
 
         m_SC = new Scanner(System.in);
 
@@ -58,7 +58,22 @@ public class Lectorteclado {
         return retval;
 
     }
+    public Double obtenerdoubleValidado(String mensajeReintento){
 
+        double retval = 0;
+
+        while (!m_SC.hasNextDouble()){
+            m_SC.next();
+
+            System.out.println(mensajeReintento);
+
+        }
+
+        retval = m_SC.nextDouble();
+
+        return retval;
+
+    }
 
 
     public float obtenerNumerof(){
