@@ -83,4 +83,10 @@ public class OVecR4 {
         x = Math.sqrt(Math.pow(this.x, 2) + Math.pow(this.y, 2) + Math.pow(this.w, 2) + Math.pow(this.z, 2));
         return x;
     }
+
+    @Override
+    public String toString()
+    {
+        return " i: " + getX() + " j: " + getY() + " k: " + getZ() + " t: " + getW();
+    }
 }
