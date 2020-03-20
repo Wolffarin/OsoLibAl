@@ -1,81 +1,179 @@
 import hn.edu.ujcv.progra.*;
-
+import java.util.Scanner;
 public class Main {
+
     public static void main(String[] args) {
+        Lectorteclado lector = new Lectorteclado();
+        Scanner sc = new Scanner(System.in);
 
-        // BASE DEL PROGRAMA PARA EJECUCION
+        System.out.println("                      Bienvenido a la calculadora de algebra lineal");
+         System.out.println("Estamos a su Dispocicion");
+        System.out.println("¿Que operacion desea Realizar?");
+        System.out.println("1. Vectores");
+        System.out.println("2. Matrices");
+        System.out.println("3. Ninguno");
 
-        System.out.println("**ALGEBRA LINEAL LIBRERIA 2020**")
+        System.out.println(    " seleccione la opcion deseada");
+        int seleccion = sc.nextInt();
+switch (seleccion) {
+case 1:
+            { System.out.println("Ha seleccionado Vectores");
+                System.out.println("<------------------------------------>");
+                System.out.println("seleccione el tipo de vector");
+                System.out.println("1. Vector en R2");
+                System.out.println("2. Vector en R3");
+                System.out.println("3. Vector en R4");
+                System.out.println(    " seleccione la opcion deseada");
+                    System.out.println("<------------------------------------>");
+                    int opcB = sc.nextInt();
+                    switch (opcB)
+                    {
+                    case 1:
+                        System.out.println("selecciono Vector en R2");
+                        System.out.println("<------------------------------------>");
+                        System.out.println("seleccione La operacion que desea realizar");
+                        System.out.println("1. Suma ");
+                        System.out.println("2. Restas");
+                        System.out.println("3. Producto Punto");
+                        System.out.println("4. Magnitud");}
+                System.out.println("<------------------------------------>");
+                int opcC = sc.nextInt();
+                switch(opcC)
+                {  case 1:
 
-        System.out.println(" ");
-                                    // Matrices 2x2
-        System.out.println("MATRICES EN 2X2")
-        System.out.println(" ");
-// Objeto MatrizM1
-        System.out.println("La Matriz 1 es: " + M1);
-        System.out.println(" ");
-// Objeto Matriz M2
-        System.out.println("La Matriz 2 es: " + M2);
-        System.out.println(" ");
-//  Objeto Matriz M3
-        System.out.println("La Matriz 3 es: " + M3);
-        System.out.println(" ");
-        // Objeto Matriz M4
-        System.out.println("La Matriz 4 es: " + M4);
-        System.out.println(" ");
-//Suma de Clase OMat2x2
-        System.out.println("La Suma de Matrices es: " + M1.suma(M2));
-        System.out.println(" ");
-        // Resta de Clase OMat2x2
-        System.out.println("La Resta de Matrices es: " + M1.resta(M2));
-        System.out.println(" ");
+                    System.out.println("Ingrese el valor de i del vector A");
+                    int Ax = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                    System.out.println("Ingrese el valor de j del vector A");
+                    int Ay = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                    OVecR2 a = new OVecR2(Ax,Ay);
+                    System.out.println("Ingrese el valor de i del vector B");
+                    int Bx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                    System.out.println("Ingrese el valor de j del vector B");
+                    int By = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                    OVecR2 b = new OVecR2(Bx,By);
+                    System.out.println("La suma de los dos vectores es:");
+                    System.out.println(a.suma(b));
+                    break;
+                    case 2:
 
-        System.out.println("La Multip. de Matrices es: " + M1.mult(M2));   //multi de Clase OMat2x2
-        System.out.println(" ");
+                        System.out.println("Ingrese el valor de i del vector A");
+                        int Cx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        System.out.println("Ingrese el valor de j del vector A");
+                        int Cy = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        OVecR2 c = new OVecR2(Cx,Cy);
+                        System.out.println("Ingrese el valor de i del vector B");
+                        int Dx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        System.out.println("Ingrese el valor de j del vector B");
+                        int Dy = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        OVecR2 d = new OVecR2(Dx,Dy);
+                        System.out.println(c.suma(d));
+                        break;
 
-        System.out.println("El Det. de Matriz C es: " + M3.determinante());// determinante de Clase OMat2x2
-        System.out.println(" ");
+                    case 3:
+                        System.out.println("Ingrese el valor de i del vector A");
+                        int Ex = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        System.out.println("Ingrese el valor de j del vector A");
+                        int Ey = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        OVecR2 e = new OVecR2(Ex,Ey);
+                        System.out.println("Ingrese el valor de i del vector B");
+                        int Fx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        System.out.println("Ingrese el valor de j del vector B");
+                        int Fy = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        OVecR2 f = new OVecR2(Fx,Fy);
+                        System.out.println(e.prodPunto(f));
+                        break;
 
-        System.out.println("La Inversa de Matriz D es: " + M4.inversa());  // inversa de Clase OMat2x2
-        System.out.println(" ");
+                    case 4:
+                        System.out.println("Ingrese el valor de i del vector ");
+                        int Gx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        System.out.println("Ingrese el valor de j del vector ");
+                        int Gy = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                        OVecR2 g = new OVecR2(Gx,Gy);
+                        System.out.println(g.magnitud());
+                        break;
+                }             }
+    case 2:
 
-        System.out.println("La Transpuesta de Matriz D es: " + M4.transpuesta()); // transpuesta de Clase OMat2x2
-        System.out.println(" ");
-        // Creando Obtetos
-        //TODAS LA MATRICES DE 2X2
-        OMat2x2 M1 = new OMat2x2(-5,3,4,7);
-        OMat2x2 M2 = new OMat2x2(9,0,2,-5);
-        OMat2x2 M3 = new OMat2x2(5,3,-1,4);
-        OMat2x2 M4 = new OMat2x2(7,5,-2,9);
-        // TODAS LAS MATRICES QUE CORRESPONDEN A 3X3
-        OMat3x3 Ma1 = new OMat3x3(0,-7,3,2,4,-1,12,7,-6);
-        OMat3x3 Ma2 = new OMat3x3(5,4,-3,0,-6,10,-2,8,11);
-        OMat3x3 Ma3 = new OMat3x3(-2,4,5,6,7,-3,3,0,2);
-        // TODAS LAS MATRICES QUE CORRESPONDEN A 4X4
-        OMat4x4 M1 = new OMat4x4(1,2,3,4,
-                5,6,7,8,
-                9,10,11,12,
-                13, 14,15,16);
-        OMat4x4 M2 = new OMat4x4(-1,5,-1,6,
-                4,5,10,8,
-                -4,8,9,3,
-                0,-8,-5,3);
+        System.out.println("selecciono Vector en R3");
+        System.out.println("<------------------------------------>");
+        System.out.println("seleccione La operacion que desea realizar");
+        System.out.println("1. Suma ");
+        System.out.println("2. Restas");
+        System.out.println("3. Producto Punto");
+        System.out.println("4. Magnitud");}
+        System.out.println("<------------------------------------>");
+        int opcD = sc.nextInt();
+        switch(opcD)
+        {
+            case 1:
+
+                System.out.println("Ingrese el valor de i del vector A");
+                int Ax = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese el valor de j del vector A");
+                int Ay = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese al valor de k del vector A");
+                int Az = lector.obtenerEnteroValidado("Ingrese numero valido");
+                OVecR3 a = new OVecR3(Ax,Ay,Az);
+                System.out.println("Ingrese el valor de i del vector B");
+                int Bx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese el valor de j del vector B");
+                int By = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese al valor de k del vector A");
+                int Bz = lector.obtenerEnteroValidado("Ingrese numero valido");
+                OVecR3 b = new OVecR3(Bx,By,Bz);
+                System.out.println("La suma de los dos vectores es:");
+                System.out.println(a.suma(b));
+                break;
+
+            case 2:
+
+                System.out.println("Ingrese el valor de i del vector A");
+                int Cx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese el valor de j del vector A");
+                int Cy = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese al valor de k del vector A");
+                int Cz = lector.obtenerEnteroValidado("Ingrese numero valido");
+                OVecR3 c = new OVecR3(Cx,Cy,Cz);
+                System.out.println("Ingrese el valor de i del vector B");
+                int Dx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese el valor de j del vector B");
+                int Dy = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese al valor de k del vector A");
+                int Dz = lector.obtenerEnteroValidado("Ingrese numero valido");
+                OVecR3 d = new OVecR3(Dx,Dy,Dz);
+                System.out.println(c.resta(d));
+                break;
+
+            case 3:
+                System.out.println("Ingrese el valor de i del vector A");
+                int Ex = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese el valor de j del vector A");
+                int Ey = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese al valor de k del vector A");
+                int Ez = lector.obtenerEnteroValidado("Ingrese numero valido");
+                OVecR3 e = new OVecR3(Ex,Ey,Ez);
+                System.out.println("Ingrese el valor de i del vector B");
+                int Fx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese el valor de j del vector B");
+                int Fy = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese al valor de k del vector A");
+                int Fz = lector.obtenerEnteroValidado("Ingrese numero valido");
+                OVecR3 f = new OVecR3(Fx,Fy,Fz);
+                System.out.println(e.prodPunto(f));
+                break;
+
+            case 4:
+                System.out.println("Ingrese el valor de i del vector ");
+                int Gx = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                System.out.println("Ingrese el valor de j del vector ");
+                int Gy = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                OVecR2 g = new OVecR2(Gx,Gy);
+                System.out.println(g.magnitud());
+                break;
+        }
 
 
-        // TODOS LOS VECTORES CORRESPONDIENTES EN R2
-        OVecR2 V1 = new OVecR2(-5, 4);
-        OVecR2 V2 = new OVecR2(-3, -8);
-        OVecR2 V3 = new OVecR2(-11, -2);
-        // TODOS LOS VECTORES CORRESPONDIENTES EN R3
-        OVecR3 Ve1 = new OVecR3(2, 6, 3);
-        OVecR3 Ve2 = new OVecR3(1, 3, 4);
-        OVecR3 Ve3 = new OVecR3(-3, -2, 5);
-        OVecR3 Ve4 = new OVecR3(6, -10, -1);
-        // TODOS LOS VECTORES CORRESPONDIENTES A R4
-        OVecR4 Vec1 = new OVecR4(5,7,6,3);
-        OVecR4 Vec2 = new OVecR4(1,2,3,4);
-        OVecR4 Vec3 = new OVecR4(9,1,0,6);
 
+}
 
     }
-}
