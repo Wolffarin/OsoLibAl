@@ -9,7 +9,7 @@ public class OMat3x3 {
     //constructoress
 
 
-    public OMat3x3(double m11, double m12, double m13, double m21) {
+    public OMat3x3(double m11, double m12, double m13, double m21, double a22, double a23, int a31, double a32, double a33) {
         this.m11 = m11; this.m12 = m12; this.m13 = m13; this.m21 = m21; this.m22 = m22;
         this.m23 = m23; this.m31 = m31; this.m32 = m32; this.m33 = m33;
         double L = m11 + m12 + m13+ m21 + m22 + m23+  m31 + m32 + m33;
@@ -176,43 +176,49 @@ public class OMat3x3 {
         r32 = Math.sin(alpha);
         r33 = Math.cos(alpha);
         return new OMat3x3(1,0,0,
-                0
-        );
+                0, r22, r23,
+                0, r32 , r33);
     }
 
-    public static OMat3x3 rotacionY(double alpha)
+    public static OMat3x3 rotacionY(double alpha, int a22, int a23, int a31, int a32, int a33)
     {
-        double r11,r13;
-        double r31,r33;
-        r11 = Math.cos(alpha);
-        r13 = Math.sin(alpha);
-        r31 = -Math.sin(alpha);
-        r33 = Math.cos(alpha);
+        double n11,n13;
+        double n31,n33;
+        n11 = Math.cos(alpha); n13 = Math.sin(alpha);n31 = -Math.sin(alpha); n33 = Math.cos(alpha);
 
-        return new OMat3x3(r11,r13,r31,r33);
+        return new OMat3x3
+                (n11,n13,n31,n33, a22, a23, a31, a32, a33);
     }
 
-    public static OMat3x3 rotacionZ(double alpha)
+    public static OMat3x3 rotacionZ(double alpha, int a22, int a23, int a31, int a32, int a33)
     {
-        double r11,r12;
-        double r21,r22;
-        r11 = Math.cos(alpha);
-        r12 = Math.sin(alpha);
-        r21 = -Math.sin(alpha);
-        r22 = Math.cos(alpha);
-        return new OMat3x3(r11,r12,0,r21);
+        double n11,n12;
+        double n21,n22;
+        n11 = Math.cos(alpha);
+        n12 = Math.sin(alpha);
+        n21 = -Math.sin(alpha);
+        n22 = Math.cos(alpha);
+        return new OMat3x3(n11,n12,0,n21, a22, a23, a31, a32, a33);
     }
 
-    public static OMat3x3 identidad(){
+    public static OMat3x3 identidad(int a22, int a23, int a31, int a32, int a33){
         return new OMat3x3(1, 0, 0,
-                0
-        );
+                0,
+                a22, a23, a31, a32, a33);
     }
 
     @Override
     public String toString()
     {
-        return "[ "+getM11()+"      "+getM12()+"     "+getM13()+" ]\n[ "+getM21()+"      "+getM22()+"     "+getM23()+ " ]\n[ "+getM31()+"      "+getM32()+"     "+getM33()+" ]";
+        return "[ "+getM11()+"" +
+                ""+getM12()+"" +
+                ""+getM13()+" ]\n[" +
+                ""+getM21()+"" +
+                ""+getM22()+"" +
+                ""+getM23()+ " ]\n[ " +
+                ""+getM31()+"" +
+                ""+getM32()+"" +
+                ""+getM33()+" ]";
     }
 
 
