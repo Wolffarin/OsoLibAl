@@ -7,11 +7,11 @@ public class OVecR4 {
     private double w;
     private double z;
 
-    public OVecR4(double x, double y, double w, double z) {
-        this.x = x;
-        this.y = y;
-        this.w = w;
-        this.z = z;
+    public OVecR4(Object x, Object y, Object w, Object z) {
+        this.x = (double) x;
+        this.y = (double) y;
+        this.w = (double) w;
+        this.z = (double) z;
     }
 
 

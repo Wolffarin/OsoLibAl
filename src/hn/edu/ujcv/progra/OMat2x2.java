@@ -71,9 +71,7 @@ public class OMat2x2 {
         r21 = this.m21 + b.m21;
         r22 = this.m22 + b.m22;
 
-        double g = r11 + r12 + r21 + r22;
-
-        return g;
+        double g = r11 + r12 + r21 + r22; return g;
     }
 
     public double resta(OMat2x2 b){
@@ -148,11 +146,6 @@ public class OMat2x2 {
 
 
 
-    // v * M => vector
-    public OVecR2 mult(OVecR2 a)
-    {
-        return new OVecR2(a.getX()*this.m11 + a.getY()*this.m21,a.getX()*this.m12 + a.getY()*this.m22);
-    }
     @Override
     public String toString()
     {

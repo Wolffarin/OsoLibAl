@@ -1,9 +1,9 @@
 
-import java.util.Scanner;
+   import java.util.Scanner;
 
 
 
-public class Lectorteclado {
+public class   Lectorteclado {
 
 
     // Patron de diseño Singleton.
@@ -117,5 +117,7 @@ public class Lectorteclado {
     }
 
 
-
+    public Object obtenerDoubleValidado(String ingrese_un_valor) {
+        return null;
+    }
 }
