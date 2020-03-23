@@ -64,7 +64,7 @@ public class Main {
                                     System.out.println("EL RESULTADO OBTENIDO ES" + I1.suma(I2));
                                     System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                                     System.out.println("S/N");
-                                    volvermenuprincipal = sc.nextLine();
+                                     volvermenuprincipal = sc.next();
                                     break;
                                 case 2:
                                     System.out.println("DATOS DE LA PRIMERA FILA");
@@ -82,7 +82,7 @@ public class Main {
                                     System.out.println("EL RESULTADO OBTENIDO ES" + R1.resta(R2));
                                     System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                                     System.out.println("S/N");
-                                    volvermenuprincipal = sc.nextLine();
+                                    volvermenuprincipal = sc.next();
                                     break;
                                 case 3:
                                     System.out.println("DATOS DE LA PRIMERA FILA");
@@ -95,7 +95,7 @@ public class Main {
                                     System.out.println("EL RESULTADO OBTENIDO ES" + g.magnitud());
                                     System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                                     System.out.println("S/N");
-                                    volvermenuprincipal = sc.nextLine();
+                                    volvermenuprincipal = sc.next();
                                     break;
                                 case 4:
                                     System.out.println("DATOS DE LA PRIMERA FILA");
@@ -113,7 +113,7 @@ public class Main {
                                     System.out.println("EL RESULTADO OBTENIDO ES" + E1.prodPunto(E2));
                                     System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                                     System.out.println("S/N");
-                                    volvermenuprincipal = sc.nextLine();
+                                    volvermenuprincipal = sc.next();
                                     break;
                                 case 5:
                                     break;
@@ -152,7 +152,7 @@ public class Main {
                             System.out.println("EL RESULTADO OBTENIDO ES" + I1.suma(I2));
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 2:
                             System.out.println("DATOS DE LA PRIMERA FILA");
@@ -175,7 +175,7 @@ public class Main {
                             System.out.println("EL RESULTADO OBTENIDO ES" + R1.resta(R2));
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 3:
                             System.out.println("DATOS DE LA PRIMERA FILA");
@@ -190,7 +190,7 @@ public class Main {
                             System.out.println("EL RESULTADO OBTENIDO ES" + g.magnitud());
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 4:
                             System.out.println("DATOS DE LA PRIMERA FILA");
@@ -214,7 +214,7 @@ public class Main {
                             System.out.println("EL RESULTADO OBTENIDO ES" + E1.prodPunto(E2));
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 5:
                             System.out.println("DATOS DE LA PRIMERA FILA");
@@ -237,7 +237,7 @@ public class Main {
                             System.out.println("EL RESULTADO OBTENIDO ES" + G1.prodCruz(G2));
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 6:
                             break;
@@ -279,7 +279,7 @@ public class Main {
                             System.out.println("EL RESULTADO OBTENIDO ES" + I1.suma(I2));
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 2:
                             System.out.println("DATOS DE LA PRIMERA FILA");
@@ -305,7 +305,7 @@ public class Main {
                             System.out.println("EL RESULTADO OBTENIDO ES" + R1.resta(R2));
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 3:
                             System.out.println("DATOS DE LA PRIMERA FILA");
@@ -320,9 +320,9 @@ public class Main {
                             OVecR4 g = new OVecR4(m, n, o, j);
 
                             System.out.println("EL RESULTADO OBTENIDO ES" + g.magnitud());
-                            System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
+                            System.out.println("DESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 4:
                             System.out.println("DATOS DE LA PRIMERA FILA");
@@ -349,7 +349,7 @@ public class Main {
                             System.out.println("EL RESULTADO OBTENIDO ES" + E1.prodPunto(E2));
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 5:
                             System.out.println("DATOS DE LA PRIMERA FILA");
@@ -375,7 +375,7 @@ public class Main {
                             System.out.println("EL RESULTADO OBTENIDO ES" + G1.prodCruz(G2));
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
                         case 6:
                             break;
@@ -389,6 +389,7 @@ public class Main {
 
                     int seleccionmat2 = sc.nextInt();
                     switch (seleccionmat2) {
+                        case 1:
                         System.out.println("Seleccione la operacion que desee realizar");
 
                         System.out.println(" 1.SUMA ======== 2.RESTA ======== 3.MULTIPLICACION ============= 4. DETERMINANTE =========5. IDENTIDAD ========6.ROTACION");
@@ -396,7 +397,7 @@ public class Main {
                         int seleccion2 = sc.nextInt();
 
                         switch (seleccion2) {
-
+                            case 1:
                             System.out.println("Ingres las primeras matrices");
                             System.out.println("m11");
                             double m11 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
@@ -419,22 +420,114 @@ public class Main {
                             System.out.println("p22");
                             double p22 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
                             OMat2x2 I2 = new OMat2x2(p11, p12, p21, p22);
-                            System.out.println("EL RESULTADO OBTENIDO ES" + I1.suma(I2));
+                            System.out.println("EL RESULTADO OBTENIDO ES      "   + I1.suma(I2));
                             System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
                             System.out.println("S/N");
-                            volvermenuprincipal = sc.nextLine();
+                            volvermenuprincipal = sc.next();
                             break;
 
+                            case 2:
 
-                        }
+                                System.out.println("Ingres las primeras matrices");
+                                System.out.println("x11");
+                                double x11 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                        }       System.out.println("x12");
+                                double x12 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                    }           System.out.println("x21");
+                                double x21 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                                System.out.println("x22");
+            }                   double x22 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                                OMat2x2 D1 = new OMat2x2();
+                                System.out.println("Ingrese las segundas matrices");
+                                System.out.println("p11");
+                                double u11 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                                System.out.println("p12");
+                                double u12 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+
+                                System.out.println("p21");
+                                double u21 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                                System.out.println("p22");
+                                double u22 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                                OMat2x2 D2 = new OMat2x2(u11, u12, u21, u22);
+                                System.out.println("EL RESULTADO OBTENIDO ES      "   + D1.resta(D2));
+                                System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
+                                System.out.println("S/N");
+                                volvermenuprincipal = sc.next();
+                                break;
 
 
-                    }
 
 
-            }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
             do {
                 volvermenuprincipal = sc.nextLine();
             } while (!volvermenuprincipal.equalsIgnoreCase("s") && !volvermenuprincipal.equalsIgnoreCase("n"))

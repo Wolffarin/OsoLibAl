@@ -17,7 +17,7 @@ public class OMat2x2 {
         this.m12 = m12;
         this.m21 = m21;
         this.m22 = m22;
-        double m = m11 + m12 + m21 + m22;
+
     }
 
     public OMat2x2(OVecR2 a, OVecR2 b){}
@@ -57,38 +57,33 @@ public class OMat2x2 {
 
     public OMat2x2 inversa()
     {
-        this.determinante();
-        return new OMat2x2((1/this.determinante()) * this.m22,(1/this.determinante()) * -this.m12,
-                (1/this.determinante()) * -this.m21,(1/this.determinante()) * this.m11);
+        return new OMat2x2( (1) /
+                ((m11 * m22) -
+                (m21 * m12)) * m22,
+                (1) /
+                ((m11 * m22) -
+                        (m21 * m12)) * -m12,
+                (1) / ((m11 * m22) -
+                        (m21 * m12))
+                        * -m21, (1) /
+                ((m11 * m22)
+                - (m21 * m12)) * m11);
     }
 
-    public double suma(OMat2x2 b){
-        double r11, r12;
-        double r21, r22;
 
-        r11 = this.m11 + b.m11;
-        r12 = this.m12 + b.m12;
-        r21 = this.m21 + b.m21;
-        r22 = this.m22 + b.m22;
+    public OMat2x2 suma(OMat2x2 b){
 
-        double g = r11 + r12 + r21 + r22; return g;
+
+        return new OMat2x2(this.m11 + b.m11, this.m12 + b.m12, this.m21 + b.m21, this.m22 + b.m22);
     }
 
-    public double resta(OMat2x2 b){
-        double n11, n12;
 
-        double n21, n22;
 
-        n11 = this.m11 - b.m11;
-        n12 = this.m12 - b.m12;
-        n21 = this.m21 - b.m21;
-        n22 = this.m22 - b.m22;
-
-        double f = n11 + n12 + n21 + n22;
-
-        return f;
-
+    public OMat2x2 resta(OMat2x2 b){
+        return new OMat2x2(this.m11 - b.m11, this.m12 - b.m12, this.m21 - b.m21, this.m22 - b.m22);
     }
+
+
 
     public double multip(OMat2x2 b){
         double n11, n12;
@@ -105,19 +100,14 @@ public class OMat2x2 {
         return  p;
     }
 
-    public double determinante(){
-        double n11, n12;
+    public double determinante()
+    {
 
-        double n21, n22;
 
-        n11 = this.m11;
-        n12 = this.m12;
-        n21 = this.m21;
-        n22 = this.m22;
-
-        double d = (n11 * n22) - (n12 * n21);
-
-        return d;
+        double Solucion;
+        Solucion =       (this.m11 * this.m22)
+                       - (this.m12 * this.m21);
+        return Solucion;
     }
 
 
