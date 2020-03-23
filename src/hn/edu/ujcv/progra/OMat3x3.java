@@ -9,7 +9,7 @@ public class OMat3x3 {
     //constructoress
 
 
-    public OMat3x3(double m11, double m12, double m13, double m21, double a22, double a23, int a31, double a32, double a33) {
+    public OMat3x3() {
         this.m11 = m11; this.m12 = m12; this.m13 = m13; this.m21 = m21; this.m22 = m22;
         this.m23 = m23; this.m31 = m31; this.m32 = m32; this.m33 = m33;
         double L = m11 + m12 + m13+ m21 + m22 + m23+  m31 + m32 + m33;
@@ -158,7 +158,7 @@ public class OMat3x3 {
         //
         return p;
     }
-    public double determinante()
+    public double determinante(OMat3x3 e2)
     {
         double solucion;
         solucion = (this.m11*this.m22*this.m33) + (this.m12*this.m23*this.m31)
@@ -178,9 +178,8 @@ public class OMat3x3 {
         r23 = -Math.sin(alpha);
         r32 = Math.sin(alpha);
         r33 = Math.cos(alpha);
-        return new OMat3x3(1,0,0,
-                0, r22, r23,
-                0, r32 , r33);
+        return new OMat3x3(
+        );
     }
 
     public static OMat3x3 rotacionY(double alpha, int a22, int a23, int a31, int a32, int a33)
@@ -190,10 +189,10 @@ public class OMat3x3 {
         n11 = Math.cos(alpha); n13 = Math.sin(alpha);n31 = -Math.sin(alpha); n33 = Math.cos(alpha);
 
         return new OMat3x3
-                (n11,n13,n31,n33, a22, a23, a31, a32, a33);
+                ();
     }
 
-    public static OMat3x3 rotacionZ(double alpha, int a22, int a23, int a31, int a32, int a33)
+    public static OMat3x3 rotacionZ(double alpha)
     {
         double n11,n12;
         double n21,n22;
@@ -201,13 +200,11 @@ public class OMat3x3 {
         n12 = Math.sin(alpha);
         n21 = -Math.sin(alpha);
         n22 = Math.cos(alpha);
-        return new OMat3x3(n11,n12,0,n21, a22, a23, a31, a32, a33);
+        return new OMat3x3();
     }
 
-    public static OMat3x3 identidad(int a22, int a23, int a31, int a32, int a33){
-        return new OMat3x3(1, 0, 0,
-                0,
-                a22, a23, a31, a32, a33);
+    public static OMat3x3 identidad(){
+        return new OMat3x3();
     }
 
     @Override
@@ -225,6 +222,8 @@ public class OMat3x3 {
     }
 
 
-
+    public double determinante() {
+        return 0;
+    }
 }
 

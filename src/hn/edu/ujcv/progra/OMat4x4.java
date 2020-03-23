@@ -29,7 +29,7 @@ public class OMat4x4 {
         this.mat43 = mat43;
         this.mat44 = mat44;
 
-        double L = mat11 + mat12 + mat13 + mat14 + mat21 + mat22 + mat23 + mat24 + mat31 + mat32 + mat33 + mat34 + mat41 + mat42 + mat43 + mat44;
+       
     }
 
     public OMat4x4() {
@@ -244,12 +244,13 @@ public class OMat4x4 {
                 this.mat41 * b.mat11 + this.mat42 * b.mat21 + this.mat43 * b.mat31 + this.mat44 * b.mat41, this.mat41 * b.mat12 + this.mat42 * b.mat22 + this.mat43 * b.mat32 + this.mat44 * b.mat42, this.mat41 * b.mat13 + this.mat42 * b.mat23 + this.mat43 * b.mat33 + this.mat44 * b.mat43, this.mat41 * b.mat14 + this.mat42 * b.mat24 + this.mat43 * b.mat34 + this.mat44 * b.mat44);
     }
 
-    public double determinante(int a22, int a23, int a31, int a32, int a33) {
+    public double determinante()
+    {
         double respuesta;
-        OMat3x3 cofA = new OMat3x3(this.mat22, this.mat23, this.mat24, this.mat32, a22, a23, a31, a32, a33);
-        OMat3x3 cofB = new OMat3x3(this.mat21, this.mat23, this.mat24, this.mat31, a22, a23, a31, a32, a33);
-        OMat3x3 cofC = new OMat3x3(this.mat21, this.mat22, this.mat24, this.mat31, a22, a23, a31, a32, a33);
-        OMat3x3 cofD = new OMat3x3(this.mat21, this.mat22, this.mat23, this.mat31, a22, a23, a31, a32, a33);
+        OMat3x3 cofA = new OMat3x3();
+        OMat3x3 cofB = new OMat3x3();
+        OMat3x3 cofC = new OMat3x3();
+        OMat3x3 cofD = new OMat3x3();
         respuesta = (this.mat11 * cofA.determinante()) - (this.mat12 * cofB.determinante()) + (this.mat13 * cofC.determinante()) - (this.mat14 * cofD.determinante());
         return respuesta;
     }
@@ -290,48 +291,33 @@ public class OMat4x4 {
         return new OMat4x4();
     }
 
-    public Object inversa(int a22, int a23, int a31, int a32, int a33) {
-        if (this.determinante(a22, a23, a31, a32, a33) != 0) {
+    public Object inversa() {
+        if (this.determinante() != 0) {
             double r11, r12, r13, r14;
             double r21, r22, r23, r24;
             double r31, r32, r33, r34;
             double r41, r42, r43, r44;
             double det;
-            det = this.determinante(a22, a23, a31, a32, a33);
-            OMat3x3 adj11 = new OMat3x3(this.mat22, this.mat23, this.mat24, this.mat32, a22, a23, a31, a32, a33);
-            OMat3x3 adj12 = new OMat3x3(this.mat21, this.mat23, this.mat24, this.mat31, a22, a23, a31, a32, a33);
-            OMat3x3 adj13 = new OMat3x3(this.mat21, this.mat22, this.mat24, this.mat31, a22, a23, a31, a32, a33);
-            OMat3x3 adj14 = new OMat3x3(this.mat21, this.mat22, this.mat23, this.mat31, a22, a23, a31, a32, a33);
-            OMat3x3 adj21 = new OMat3x3(this.mat12, this.mat13, this.mat14, this.mat32, a22, a23, a31, a32, a33);
-            OMat3x3 adj22 = new OMat3x3(this.mat11, this.mat13, this.mat14, this.mat31, a22, a23, a31, a32, a33);
-            OMat3x3 adj23 = new OMat3x3(this.mat11, this.mat12, this.mat14, this.mat31, a22, a23, a31, a32, a33);
-            OMat3x3 adj24 = new OMat3x3(this.mat11, this.mat12, this.mat13, this.mat31, a22, a23, a31, a32, a33);
-            OMat3x3 adj31 = new OMat3x3(this.mat12, this.mat13, this.mat14, this.mat22, a22, a23, a31, a32, a33);
-            OMat3x3 adj32 = new OMat3x3(this.mat11, this.mat13, this.mat14, this.mat21, a22, a23, a31, a32, a33);
-            OMat3x3 adj33 = new OMat3x3(this.mat11, this.mat12, this.mat14, this.mat21, a22, a23, a31, a32, a33);
-            OMat3x3 adj34 = new OMat3x3(this.mat11, this.mat12, this.mat13, this.mat21, a22, a23, a31, a32, a33);
-            OMat3x3 adj41 = new OMat3x3(this.mat12, this.mat13, this.mat14, this.mat22, a22, a23, a31, a32, a33);
-            OMat3x3 adj42 = new OMat3x3(this.mat11, this.mat13, this.mat14, this.mat21, a22, a23, a31, a32, a33);
-            OMat3x3 adj43 = new OMat3x3(this.mat11, this.mat12, this.mat14, this.mat21, a22, a23, a31, a32, a33);
-            OMat3x3 adj44 = new OMat3x3(this.mat11, this.mat12, this.mat13, this.mat21, a22, a23, a31, a32, a33);
-            r11 = Math.pow(-1, 2) * adj11.determinante();
-            r12 = Math.pow(-1, 3) * adj12.determinante();
-            r13 = Math.pow(-1, 4) * adj13.determinante();
-            r14 = Math.pow(-1, 5) * adj14.determinante();
-            r21 = Math.pow(-1, 3) * adj21.determinante();
-            r22 = Math.pow(-1, 4) * adj22.determinante();
-            r23 = Math.pow(-1, 5) * adj23.determinante();
-            r24 = Math.pow(-1, 6) * adj24.determinante();
-            r31 = Math.pow(-1, 4) * adj31.determinante();
-            r32 = Math.pow(-1, 5) * adj32.determinante();
-            r33 = Math.pow(-1, 6) * adj33.determinante();
-            r34 = Math.pow(-1, 7) * adj34.determinante();
-            r41 = Math.pow(-1, 5) * adj41.determinante();
-            r42 = Math.pow(-1, 6) * adj42.determinante();
-            r43 = Math.pow(-1, 7) * adj43.determinante();
-            r44 = Math.pow(-1, 8) * adj44.determinante();
+            det = this.determinante();
+            OMat3x3 adj11 = new OMat3x3();
+            OMat3x3 adj12 = new OMat3x3();
+            OMat3x3 adj13 = new OMat3x3();
+            OMat3x3 adj14 = new OMat3x3();
+            OMat3x3 adj21 = new OMat3x3();
+            OMat3x3 adj22 = new OMat3x3();
+            OMat3x3 adj23 = new OMat3x3();
+            OMat3x3 adj24 = new OMat3x3();
+            OMat3x3 adj31 = new OMat3x3();
+            OMat3x3 adj32 = new OMat3x3();
+            OMat3x3 adj33 = new OMat3x3();
+            OMat3x3 adj34 = new OMat3x3();
+            OMat3x3 adj41 = new OMat3x3();
+            OMat3x3 adj42 = new OMat3x3();
+            OMat3x3 adj43 = new OMat3x3();
+            OMat3x3 adj44 = new OMat3x3();
 
-            OMat4x4 a = new OMat4x4(r11, r12, r13, r14, r21, r22, r23, r24, r31, r32, r33, r34, r41, r42, r43, r44);
+
+            OMat4x4 a = new OMat4x4();
             OMat4x4 trans = new OMat4x4();
             trans = a.transpuesta();
             return new OMat4x4(trans.mat11 / det, trans.mat12 / det, trans.mat13 / det, trans.mat14 / det,
@@ -350,6 +336,7 @@ public class OMat4x4 {
 
 
     }
+
 
 }
 

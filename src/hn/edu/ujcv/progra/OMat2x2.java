@@ -100,7 +100,7 @@ public class OMat2x2 {
         return  p;
     }
 
-    public double determinante()
+    public double determinante(OMat2x2 e2)
     {
 
 
@@ -113,7 +113,7 @@ public class OMat2x2 {
 
 
 
-    public static OMat2x2 identidad()
+    public static OMat2x2 identidad(OMat2x2 k2)
 
     {
         return new OMat2x2(1,0,0,1);
