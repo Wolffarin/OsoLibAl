@@ -4,13 +4,19 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
+        
         Lectorteclado lector = new Lectorteclado();
+
         Scanner sc = new Scanner(System.in);
+
+
         String volvermenuprincipal;
 
         Object OVecR4;
         Lectorteclado lt = Lectorteclado.getInstance();
         do {
+
+
             System.out.println("                      Bienvenido a la calculadora de algebra lineal");
 
 
