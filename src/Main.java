@@ -799,7 +799,7 @@ public class Main {
                         case 3:
                             System.out.println("Seleccione la operacion que desee realizar");
 
-                            System.out.println(" 1.SUMA ======== 2.RESTA ======== 3.MULTIPLICACION ============= 4. DETERMINANTE =========5. IDENTIDAD ========6.ROTACION");
+                            System.out.println(" 1.SUMA ======== 2.RESTA ======== 3.MULTIPLICACION ============= 4. DETERMINANTE =========5. IDENTIDAD ========6.ROTACIONx =============7.ROTACION Y ==============8.ROTACION Z");
 
                             int seleccionnueva = sc.nextInt();
 
@@ -1067,7 +1067,7 @@ public class Main {
 
 
 
-                                    System.out.println("MATRIZ B");
+
                                     System.out.println("Ingrese el valor de M11: ");
                                     double f11 = lt.obtenerdoubleValidado("Ingrese un valor");
 
@@ -1142,168 +1142,233 @@ public class Main {
                                                              double i24 = lector.obtenerEnteroValidado(" Ingrese un numero valido");
                                                              System.out.println("Ingrese el valor de A31");
                                                              double i31 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                       System.out.println("Ingrese el valor de A32");
+                                       System.out.println("Ingrese  A32");
                                        double i32 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                       System.out.println("Ingrese el valor de A33");
+                                       System.out.println("IngreseA33");
                                        double i33 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                       System.out.println("Ingrese el valor de A34");
+                                       System.out.println("IngreseA34");
                                        double i34 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                       System.out.println("Ingrese el calor de A41");
+                                       System.out.println("Ingrese A41");
                                        double i41 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                       System.out.println("Ingrese el valor de A42");
+                                       System.out.println("Ingrese  A42");
                                        double i42 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                       System.out.println("Ingrese el valor de A43");
+                                       System.out.println("Ingrese A43");
                                        double i43 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                       System.out.println("Ingrese el valor de A44");
+                                       System.out.println("Ingrese  A44");
                                        double i44 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                       OMat4x4 E2 = new OMat4x4(i11,i12,i13,i14,i21,i22,i23,i24,i31,i32,i33,i34,i41,i42,i43,i44);
+                                       OMat4x4 E2 = new OMat4x4(i11,i12,i13,
+                                               i14,i21,i22,i23,i24,i31,
+                                               i32,i33,i34,i41,i42,i43,i44);
                                        System.out.println(E2.determinante());
+                                            System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
+                                            System.out.println("S/N");
+                                            volvermenuprincipal = sc.next();
+
                                        break;
                                          case 5:
-                                                                    System.out.println("Ingrese el valor de A11");
+                                                                    System.out.println("Ingrese A11");
                                                                     double h11 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A12");
+                                                                    System.out.println("Ingrese  A12");
                                                                     double h12 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A13");
+                                                                    System.out.println("Ingrese  A13");
                                                                     double h13 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A14");
+                                                                    System.out.println("Ingrese  A14");
                                                                     double h14 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A21");
+                                                                    System.out.println("Ingrese A21");
                                                                     double h21 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A22");
+                                                                    System.out.println("Ingrese  A22");
                                                                     double h22 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A23");
+                                                                    System.out.println("Ingrese A23");
                                                                     double h23 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A24");
+                                                                    System.out.println("Ingrese A24");
                                                                     double h24 = lector.obtenerEnteroValidado(" Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A31");
+                                                                    System.out.println("Ingrese  A31");
                                                                     double h31 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A32");
+                                                                    System.out.println("Ingrese A32");
                                                                     double h32 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A33");
+                                                                    System.out.println("Ingrese  A33");
                                                                     double h33 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A34");
+                                                                    System.out.println("Ingrese  A34");
                                                                     double h34 = lector.obtenerEnteroValidado("Ingrese un numero valido");
                                                                     System.out.println("Ingrese el calor de A41");
                                                                     double h41 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A42");
+                                                                    System.out.println("IngreseA42");
                                                                     double h42 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A43");
+                                                                    System.out.println("Ingrese  A43");
                                                                     double h43 = lector.obtenerEnteroValidado("Ingrese un numero valido");
-                                                                    System.out.println("Ingrese el valor de A44");
+                                                                    System.out.println("Ingrese  A44");
                                                                     double h44 = lector.obtenerEnteroValidado("Ingrese un numero valido");
                                                                     OMat4x4 h = new OMat4x4(h11,h12,h13,h14,h21,h22,h23,h24,h31,h32,h33,h34,h41,h42,h43,h44);
                                                                     System.out.println(h.inversa());
+                                                                        System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
+                                                                        System.out.println("S/N");
+                                                                        volvermenuprincipal = sc.next();
+
                                                                     break;
-                                                                    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                                       
-
-
-
-
-
-
-
-
-
+                                         case 6:
+                                                                     System.out.println("Ingrese A11");
+                                                                     double j11 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A12");
+
+                                                                     double j12 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A13");
+
+                                                                     double j13 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A14");
+
+                                                                     double j14 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A21");
+
+                                                                     double j21 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A22");
+
+                                                                     double j22 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A23");
+
+                                                                     double j23 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A24");
+
+                                                                     double j24 = lector.obtenerEnteroValidado(" Ingrese un numero valido");
+                                                                     System.out.println("Ingrese el valor de A31");
+
+                                                                     double j31 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese el valor de A32");
+
+                                                                     double j32 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese el valor de A33");
+                                                                     double j33 = lector.obtenerEnteroValidado(
+                                                                             "Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A34");
+
+                                                                     double j34 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("IngreseA41");
+
+                                                                     double j41 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A42");
+
+                                                                     double j42 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A43");
+
+                                                                     double j43 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A44");
+
+                                                                     double j44 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     OMat4x4 j = new OMat4x4(j11,j12,j13,j14,
+                                                                             j21,j22,j23,j24,j31,j32,j33,
+                                                                             j34,j41,j42,j43,j44);
+                                                                     double alphaX = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println(j.rotX(alphaX));
+
+                                                                       System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
+                                                                       System.out.println("S/N");
+                                                                       volvermenuprincipal = sc.next();
+
+                                                                     break;
+                                                          case 7:
+                                                                     System.out.println(" valor de A11");
+                                                                     double k11 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+
+                                                                     System.out.println("valor de A12");
+                                                                     double k12 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A13")
+                                                                     ;
+                                                                     double k13 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A14");
+
+                                                                     double k14 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A21");
+
+                                                                     double k21 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese eA22");
+                                                                     
+                                                                     double k22 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A23");
+
+                                                                     double k23 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A24");
+
+                                                                     double k24 = lector.obtenerEnteroValidado(" Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A31");
+
+                                                                     double k31 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A32");
+
+                                                                     double k32 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A33");
+
+                                                                     double k33 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A34");
+
+                                                                     double k34 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A41");
+                                                                     double k41 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A42");
+                                                                     double k42 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A43");
+                                                                     double k43 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A44");
+                                                                     double k44 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     OMat4x4 k = new OMat4x4(k11,k12,k13,
+                                                                             k14,k21,k22,k23,k24,k31,
+                                                                             k32,k33,k34,k41,
+                                                                             k42,k43,k44);
+                                                                     double alphaY = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println(k.rotY(alphaY));
+                                                                      System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
+                                                                      System.out.println("S/N");
+                                                                      volvermenuprincipal = sc.next();
+
+                                                                     break;
+                                         case 8:
+                                                                     System.out.println("Ingrese A11");
+                                                                     double l11 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A12");
+                                                                     double l12 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A13");
+                                                                     double l13 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A14");
+                                                                     double l14 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A21");
+                                                                     double l21 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A22");
+                                                                     double l22 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A23");
+                                                                     double l23 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A24");
+                                                                     double l24 = lector.obtenerEnteroValidado(" Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A31");
+                                                                     double l31 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese A32");
+                                                                     double l32 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A33");
+                                                                     double l33 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A34");
+                                                                     double l34 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A41");
+                                                                     double l41 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese e A42");
+                                                                     double l42 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A43");
+                                                                     double l43 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println("Ingrese  A44");
+                                                                     double l44 = lector.obtenerEnteroValidado("Ingrese un numero valido");
+
+                                                                     
+                                                                     OMat4x4 l = new OMat4x4(l11,l12
+                                                                             ,l13,l14
+                                                                             ,l21,l22,
+                                                                             l23,l24,
+                                                                             l31,l32,
+                                                                             l33,l34,
+                                                                             l41,l42,
+                                                                             l43,l44);
+                                                                     double alphaZ = lector.obtenerEnteroValidado("Ingrese un numero valido");
+                                                                     System.out.println(l.rotZ(alphaZ));
+                                                                        System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
+                                                                        System.out.println("S/N");
+                                                                        volvermenuprincipal = sc.next();
+
+                                                                     break;
                             }
 
 
@@ -1313,96 +1378,6 @@ public class Main {
 
 
             }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
             do {
                 volvermenuprincipal = sc.nextLine();
