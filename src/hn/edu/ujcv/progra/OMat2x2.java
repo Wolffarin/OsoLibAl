@@ -20,7 +20,7 @@ public class OMat2x2 {
 
     }
 
-    public OMat2x2(OVecR2 a, OVecR2 b){}
+    public OMat2x2(){}
 
 
     // accesoras y mutadoras

@@ -430,30 +430,85 @@ public class Main {
 
                                 System.out.println("Ingres las primeras matrices");
                                 System.out.println("x11");
-                                double x11 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
-                        }       System.out.println("x12");
-                                double x12 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
-                    }           System.out.println("x21");
-                                double x21 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
-                                System.out.println("x22");
-            }                   double x22 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
-                                OMat2x2 D1 = new OMat2x2();
-                                System.out.println("Ingrese las segundas matrices");
-                                System.out.println("p11");
-                                double u11 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
-                                System.out.println("p12");
-                                double u12 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                                double x11 = lt.obtenerdoubleValidado("invalido");
+                               System.out.println("x12");
 
-                                System.out.println("p21");
-                                double u21 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
-                                System.out.println("p22");
-                                double u22 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
-                                OMat2x2 D2 = new OMat2x2(u11, u12, u21, u22);
-                                System.out.println("EL RESULTADO OBTENIDO ES      "   + D1.resta(D2));
-                                System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
-                                System.out.println("S/N");
-                                volvermenuprincipal = sc.next();
-                                break;
+                               double x12 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                               System.out.println("x21");
+
+                               double x21 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                               System.out.println("x22");
+
+                               double x22 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                               OMat2x2 D1 = new OMat2x2(x11,x12,x21,x22);
+                               System.out.println("Ingrese las segundas matrices");
+                               System.out.println("p11");
+                               double u11 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                               System.out.println("p12");
+                               double u12 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+
+                               System.out.println("p21");
+                               double u21 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                               System.out.println("p22");
+                               double u22 = lt.obtenerdoubleValidado("Ingrese un valor correcto");
+                               OMat2x2 D2 = new OMat2x2(u11, u12, u21, u22);
+                               System.out.println("EL RESULTADO OBTENIDO ES      "   + D1.resta(D2));
+                               System.out.println("\u00BFDESEA CONTINUAR CON OTRA OPERACION?");
+                               System.out.println("S/N");
+                               volvermenuprincipal = sc.next();
+                               break;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                               
+
+
+
+
+
+
+
+                        }
+
+
+                    }
+
+
+
+                                
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

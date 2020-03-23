@@ -160,10 +160,13 @@ public class OMat3x3 {
     }
     public double determinante()
     {
-        double respuesta;
-        respuesta = (this.m11*this.m22*this.m33) + (this.m12*this.m23*this.m31) + (this.m13*this.m21*this.m32) - (this.m31*this.m22*this.m13) - (this.m32*this.m23*this.m11) - (this.m33*this.m21*this.m12);
+        double solucion;
+        solucion = (this.m11*this.m22*this.m33) + (this.m12*this.m23*this.m31)
+                + (this.m13*this.m21*this.m32)
+                - (this.m31*this.m22*this.m13) - (this.m32*this.m23*this.m11)
+                - (this.m33*this.m21*this.m12);
 
-        return respuesta;
+        return solucion;
     }
 
     // Metodos de la clase.
