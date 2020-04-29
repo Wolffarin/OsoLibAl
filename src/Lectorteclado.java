@@ -101,7 +101,7 @@ public class   Lectorteclado {
         double retval = 0;
 
 
-
+knkn
         while (!m_SC.hasNextDouble()){
 
             m_SC.next();
